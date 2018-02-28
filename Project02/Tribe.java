@@ -18,16 +18,38 @@ public class Tribe
 
     public Tribe(String nation, String tribe, int lifePoints)
     {
-        nationName = nation;
-        tribeName = tribe;
-        tribeLifePoints = lifePoints;
-        for(int i = 0; i < 5; i++)
-            if(i % 2 == 0)
-                members.add(new SchaperWarrior(nationName, tribeName, tribeLifePoints / 5));
-            else
-                members.add(new SchaperWizard(nationName, tribeName, tribeLifePoints / 5));
-        for(int i = 0; i < members.size(); i++)
-            livingMembers.addAll(members);
+        public Tribe(String nation, String tribe, int lifePoints)
+        {
+            nationName = nation;
+            tribeName = tribe;
+            tribeLifePoints = lifePoints;
+            if(tribe == "Uzbekistan1")
+                for(int i = 0; i < 5; i++)
+                    if(i % 2 == 0)
+                        members.add(new McCoolWarrior(nationName, tribeName, tribeLifePoints / 5));
+                    else
+                        members.add(new McCoolWizard(nationName, tribeName, tribeLifePoints / 5));
+            if(tribe == "Uzbekistan2")
+                for(int i = 0; i < 5; i++)
+                    if(i % 2 == 0)
+                        members.add(new FauxWarrior(nationName, tribeName, tribeLifePoints / 5));
+                    else
+                        members.add(new FauxWizard(nationName, tribeName, tribeLifePoints / 5));
+            if(tribe == "Berzerkistan1")
+                for(int i = 0; i < 5; i++)
+                    if(i % 2 == 0)
+                        members.add(new AndersonWarrior(nationName, tribeName, tribeLifePoints / 5));
+                    else
+                        members.add(new AndersonWizard(nationName, tribeName, tribeLifePoints / 5));
+            if(tribe == "Berzerkistan2")
+                for(int i = 0; i < 5; i++)
+                    if(i % 2 == 0)
+                        members.add(new NischalWarrior(nationName, tribeName, tribeLifePoints / 5));
+                    else
+                        members.add(new NischalWizard(nationName, tribeName, tribeLifePoints / 5));
+            for(int i = 0; i < members.size(); i++)
+                livingMembers.addAll(members);
+        }
     }
 
     public ArrayList<People> getLivingTribeMembers()
