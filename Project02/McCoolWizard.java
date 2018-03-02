@@ -14,28 +14,20 @@ public class McCoolWizard extends Project02.People
     
     public int encounterStrategy(Project02.People otherPerson) {
         int lifePoints = 0;
-        if (this.getNation() != otherPerson.getNation())
-        {
-            if (otherPerson.getLifePoints() < this.getLifePoints())
-            {
-                if (otherPerson.getType() == PeopleType.warrior) // run away
-                {
-                    lifePoints = -this.getLifePoints();
-                }
-                else // attack a wizard
-                {
-                    lifePoints = (int) (this.getLifePoints()/2);
-                }
+        if (this.getNation() != otherPerson.getNation()) {
+            if (this.getType() == otherPerson.getType()) {
+                lifePoints = this.getLifePoints;
+            }
+            else {
+                lifePoints = -this.getLifePoints();
             }
         }
         else
         {
-            if (otherPerson.getLifePoints() < this.getLifePoints()) // heal a friend
-            {
-                lifePoints = (int) (this.getLifePoints() - otherPerson.getLifePoints() / 2);
+            if (otherPerson.getLifePoints() < this.getLifePoints()) {
+                lifePoints = (int) (this.getLifePoints());
             }
-            else
-            {
+            else {
                 lifePoints = 0;
             }
         }
