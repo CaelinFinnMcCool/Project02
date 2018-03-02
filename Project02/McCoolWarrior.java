@@ -15,32 +15,23 @@ public class McCoolWarrior extends People
     public int encounterStrategy(People otherPerson)
     {
         int lifePoints = 0;
-        if(this.getNation() == otherPerson.getNation())
-        {
-            if(otherPerson.getLifePoints() < this.getLifePoints())
-            {
-                if(otherPerson.getTribe() == this.getTribe())
-                {
-                    lifePoints = -((this.getLifePoints() - otherPerson.getLifePoints()) / 2);
-                }
-                else
-                {
-                    lifePoints = -((this.getLifePoints() - otherPerson.getLifePoints()) / 4);
-                }
-            }
+        if(this.getNation() == otherPerson.getNation()) {
+            return 0;
         }
-        else
-        {
-            int points;
-            points = this.getLifePoints() - otherPerson.getLifePoints();
-            if (points > 0)
-            {
+        else {
+            if (this.getType() == otherPerson.getType() && this.getLifePoints() - otherPerson.getLifePoints() > 0) {
                 lifePoints = otherPerson.getLifePoints();
             }
-            else
-            {
+            else if (this.getType() == otherPerson.getType() && this.getLifePoints() - otherPerson.getLifePoints() <= 0) {
                 lifePoints = this.getLifePoints();
             }
+            else if (this.getType() != otherPerson.getType() && this.getLifePoints() - otherPerson.getLifePoints() > 0) {
+                lifePoints = (this.getLifePoints() / 2);
+            }
+            else {
+                lifePoints = (otherPerson.getLifePoints() / 2);
+            }
+                
         }
         return lifePoints;
     }
