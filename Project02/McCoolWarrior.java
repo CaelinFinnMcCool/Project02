@@ -19,13 +19,13 @@ public class McCoolWarrior extends People
             return 0;
         }
         else {
-            if (this.getType() == otherPerson.getType() && this.getLifePoints() - otherPerson.getLifePoints() > 0) {
+            if (otherPerson.getType() == PeopleType.warrior && this.getLifePoints() - otherPerson.getLifePoints() > 0) {
                 lifePoints = otherPerson.getLifePoints();
             }
-            else if (this.getType() == otherPerson.getType() && this.getLifePoints() - otherPerson.getLifePoints() <= 0) {
+            else if (otherPerson.getType() == PeopleType.warrior && this.getLifePoints() - otherPerson.getLifePoints() <= 0) {
                 lifePoints = this.getLifePoints();
             }
-            else if (this.getType() != otherPerson.getType() && this.getLifePoints() - otherPerson.getLifePoints() > 0) {
+            else if (otherPerson.getType() == PeopleType.wizard && this.getLifePoints() - otherPerson.getLifePoints() > 0) {
                 lifePoints = (this.getLifePoints() / 2);
             }
             else {
