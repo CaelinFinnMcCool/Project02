@@ -15,7 +15,7 @@ public class McCoolWizard extends Project02.People
     public int encounterStrategy(Project02.People otherPerson) {
         int lifePoints = 0;
         if (this.getNation() != otherPerson.getNation()) {
-            if (this.getType() == otherPerson.getType()) {
+            if (otherPerson.getType() == PeopleType.wizard) {
                 lifePoints = this.getLifePoints;
             }
             else {
