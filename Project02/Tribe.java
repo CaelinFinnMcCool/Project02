@@ -36,11 +36,11 @@ public class Tribe
                     else
                         members.add(new FauxWizard(nationName, tribeName, tribeLifePoints / 5));
             if(tribe == "Berzerkistan1")
-                for(int i = 0; i < 5; i++)
-                    if(i % 2 == 0)
-                        members.add(new AndersonWarrior(nationName, tribeName, tribeLifePoints / 5));
+                for(int i = 0; i < 8; i++)
+                    if(i % 8 == 0)
+                        members.add(new AndersonWarrior(nationName, tribeName, tribeLifePoints / 8));
                     else
-                        members.add(new AndersonWizard(nationName, tribeName, tribeLifePoints / 5));
+                        members.add(new AndersonWizard(nationName, tribeName, tribeLifePoints / 8));
             if(tribe == "Berzerkistan2")
                 for(int i = 0; i < 5; i++)
                     if(i % 2 == 0)

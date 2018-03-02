@@ -3,44 +3,43 @@ package Project02;
 import Project02.People;
 import Project02.PeopleType;
 
+// Goal of warriors is to hit enemy hard while risking lots of life points in the process.
 
-public class AndersonWarrior extends People
-{
-    AndersonWarrior(String nation, String tribe, int lifePoints)
-    {
+public class AndersonWarrior extends People {
+    AndersonWarrior(String nation, String tribe, int lifePoints) {
         super(nation, tribe, PeopleType.warrior, lifePoints);
         myDescription = "\tAnderson Warrior";
     }
 
 
-    public int encounterStrategy(People otherPerson)
-    {
+    public int encounterStrategy(People otherPerson) {
         int lifePoints = 0;
-        if(this.getNation() == otherPerson.getNation())
-        {
-            if(otherPerson.getLifePoints() < this.getLifePoints())
-            {
-                if(otherPerson.getTribe() == this.getTribe())
-                {
-                    lifePoints = -((this.getLifePoints() - otherPerson.getLifePoints()) / 2);
+        if(this.getNation() == otherPerson.getNation()) {
+            if(this.getTribe() == otherPerson.getTribe()) {
+                if(this.getLifePoints() >= 20 && otherPerson.getLifePoints() <= 20) {
+                    lifePoints = -((int)(this.getLifePoints() * 0.75)); // Give lots of life
                 }
-                else
-                {
-                    lifePoints = -((this.getLifePoints() - otherPerson.getLifePoints()) / 4);
-                }
+            }
+            else {
+                lifePoints = 0;
             }
         }
-        else
-        {
-            int points;
-            points = this.getLifePoints() - otherPerson.getLifePoints();
-            if (points > 0)
-            {
-                lifePoints = otherPerson.getLifePoints();
+        else {
+            if(otherPerson.getType() == PeopleType.warrior) {
+                if (this.getLifePoints() >= (otherPerson.getLifePoints() + 10)) {
+                    lifePoints = (int) (10 - this.getLifePoints()); // Attack without risking all lifePoints
+                }
+                else {
+                    lifePoints = this.getLifePoints(); // Heavy Attack
+                }
             }
-            else
-            {
-                lifePoints = this.getLifePoints();
+            else {
+                if (this.getLifePoints() > otherPerson.getLifePoints()) {
+                    lifePoints = ((int)(this.getLifePoints() - 1)) // Heavy Attack2 against wizards
+                }
+                else {
+                    lifePoints = this.getLifePoints(); // Heavy Attack
+                }
             }
         }
         return lifePoints;
