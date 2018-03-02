@@ -1,20 +1,8 @@
 package Project02;
-import java.util.Collection;
-import java.util.Collections;
-import java.io.StringBufferInputStream;
 import java.util.ArrayList;
-import Project02.People;
-import Project02.PeopleType;
 //import Project02.SchaperWarrior;
 //import Project02.SchaperWizard;
-import Project02.McCoolWarrior;
-import Project02.McCoolWizard;
-import Project02.FauxWarrior;
-import Project02.FauxWizard;
-import Project02.AndersonWarrior;
-import Project02.AndersonWizard;
-import Project02.NischalWarrior;
-import Project02.NischalWizard;
+
 
 public class Tribe
 {
@@ -29,30 +17,38 @@ public class Tribe
             nationName = nation;
             tribeName = tribe;
             tribeLifePoints = lifePoints;
-            if(tribe == "Uzbekistan1")
-                for(int i = 0; i < 5; i++)
-                    if(i % 2 == 0)
+            if(tribe.equals("Uzbekistan1")) {
+                for (int i = 0; i < 5; i++) {
+                    if (i % 2 == 0)
                         members.add(new McCoolWarrior(nationName, tribeName, tribeLifePoints / 5));
                     else
                         members.add(new McCoolWizard(nationName, tribeName, tribeLifePoints / 5));
-            if(tribe == "Uzbekistan2")
-                for(int i = 0; i < 5; i++)
-                    if(i % 2 == 0)
+                }
+            }
+            if(tribe.equals("Uzbekistan2")) {
+                for (int i = 0; i < 5; i++) {
+                    if (i % 2 == 0)
                         members.add(new FauxWarrior(nationName, tribeName, tribeLifePoints / 5));
                     else
                         members.add(new FauxWizard(nationName, tribeName, tribeLifePoints / 5));
-            if(tribe == "Berzerkistan1")
-                for(int i = 0; i < 8; i++)
-                    if(i % 8 == 0)
-                        members.add(new AndersonWarrior(nationName, tribeName, tribeLifePoints / 8));
-                    else
+                }
+            }
+            if(tribe.equals("Berzerkistan1")) {
+                for (int i = 0; i < 8; i++) {
+                    if (i % 8 == 0)
                         members.add(new AndersonWizard(nationName, tribeName, tribeLifePoints / 8));
-            if(tribe == "Berzerkistan2")
-                for(int i = 0; i < 5; i++)
-                    if(i % 2 == 0)
+                    else
+                        members.add(new AndersonWarrior(nationName, tribeName, tribeLifePoints / 8));
+                }
+            }
+            if(tribe.equals("Berzerkistan2")) {
+                for (int i = 0; i < 5; i++) {
+                    if (i % 2 == 0)
                         members.add(new NischalWarrior(nationName, tribeName, tribeLifePoints / 5));
                     else
                         members.add(new NischalWizard(nationName, tribeName, tribeLifePoints / 5));
+                }
+            }
             for(int i = 0; i < members.size(); i++)
                 livingMembers.addAll(members);
     }

@@ -1,8 +1,5 @@
 package Project02;
 
-import Project02.People;
-import Project02.PeopleType;
-
 // Goal of wizards is to preserve life points to give to friendly warriors to last longest in battle.
 
 public class AndersonWizard extends Project02.People {
@@ -22,7 +19,7 @@ public class AndersonWizard extends Project02.People {
             }
         }
         else {
-            if (otherPerson() = PeopleType.warrior()) {
+            if (otherPerson.getType() == PeopleType.warrior) {
                 lifePoints = -((int)this.getLifePoints()); // Run from warriors
             }
             else {

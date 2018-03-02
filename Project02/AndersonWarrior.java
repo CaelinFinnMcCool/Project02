@@ -1,8 +1,5 @@
 package Project02;
 
-import Project02.People;
-import Project02.PeopleType;
-
 // Goal of warriors is to hit enemy hard while risking lots of life points in the process.
 
 public class AndersonWarrior extends People {
@@ -35,7 +32,7 @@ public class AndersonWarrior extends People {
             }
             else {
                 if (this.getLifePoints() > otherPerson.getLifePoints()) {
-                    lifePoints = ((int)(this.getLifePoints() - 1)) // Heavy Attack2 against wizards
+                    lifePoints = ((int)(this.getLifePoints() - 1)); // Heavy Attack2 against wizards
                 }
                 else {
                     lifePoints = this.getLifePoints(); // Heavy Attack

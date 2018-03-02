@@ -1,7 +1,5 @@
 package Project02;
 
-import Project02.PeopleType;
-
 public abstract class People
 {
     private String personName;

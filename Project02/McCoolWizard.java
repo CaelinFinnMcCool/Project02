@@ -1,8 +1,5 @@
 package Project02;
 
-import Project02.People;
-import Project02.PeopleType;
-
 
 public class McCoolWizard extends Project02.People
 {
@@ -16,10 +13,10 @@ public class McCoolWizard extends Project02.People
         int lifePoints = 0;
         if (this.getNation() != otherPerson.getNation()) {
             if (otherPerson.getType() == PeopleType.wizard) {
-                lifePoints = this.getLifePoints;
+                lifePoints = ((this.getLifePoints()));
             }
             else {
-                lifePoints = -this.getLifePoints();
+                lifePoints = -(this.getLifePoints());
             }
         }
         else
