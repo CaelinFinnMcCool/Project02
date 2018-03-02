@@ -5,8 +5,16 @@ import java.io.StringBufferInputStream;
 import java.util.ArrayList;
 import Project02.People;
 import Project02.PeopleType;
-import Project02.SchaperWarrior;
-import Project02.SchaperWizard;
+//import Project02.SchaperWarrior;
+//import Project02.SchaperWizard;
+import Project02.McCoolWarrior;
+import Project02.McCoolWizard;
+import Project02.FauxWarrior;
+import Project02.FauxWizard;
+import Project02.AndersonWarrior;
+import Project02.AndersonWizard;
+import Project02.NischalWarrior;
+import Project02.NischalWizard;
 
 public class Tribe
 {
