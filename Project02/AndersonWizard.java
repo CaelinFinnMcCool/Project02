@@ -15,7 +15,7 @@ public class AndersonWizard extends Project02.People {
         int lifePoints = 0;
         if (this.getNation() == otherPerson.getNation()) {
             if (this.getTribe() == otherPerson.getTribe()) {
-                lifePoints = -((int)(this.getLifePoints() / 8)) // Give life to warriors
+                lifePoints = -((int)(this.getLifePoints() / 8)); // Give life to warriors
             }
             else {
                 lifePoints = 0;
@@ -23,14 +23,14 @@ public class AndersonWizard extends Project02.People {
         }
         else {
             if (otherPerson() = PeopleType.warrior()) {
-                lifePoints = -this.getLifePoints(); // Run from warriors
+                lifePoints = -((int)this.getLifePoints()); // Run from warriors
             }
             else {
                 if (this.getLifePoints() > otherPerson.getLifePoints()) {
                     lifePoints = (int)(this.getLifePoints() - otherPerson.getLifePoints()); // Attack weaker wizards
             }
                 else {
-                    lifePoints = -this.getLifePoints(); // Run from wizards
+                    lifePoints = -((int)this.getLifePoints()); // Run from wizards
                 }
             }
         }

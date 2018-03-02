@@ -18,8 +18,6 @@ public class Tribe
 
     public Tribe(String nation, String tribe, int lifePoints)
     {
-        public Tribe(String nation, String tribe, int lifePoints)
-        {
             nationName = nation;
             tribeName = tribe;
             tribeLifePoints = lifePoints;
@@ -49,7 +47,6 @@ public class Tribe
                         members.add(new NischalWizard(nationName, tribeName, tribeLifePoints / 5));
             for(int i = 0; i < members.size(); i++)
                 livingMembers.addAll(members);
-        }
     }
 
     public ArrayList<People> getLivingTribeMembers()
