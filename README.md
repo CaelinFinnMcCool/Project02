@@ -9,10 +9,15 @@ Modify the Project base code to use the strategy pattern to add strategies for p
 
 Each team's leader will fork this repository. Add the instructor, and team members,  as
 collaborators of the fork.
+x
 
 Each team will create two Nations (choose names)
+Berzerkistan
+Uzbekistan
+x
 
 Each team will create a tribe for each team member (choose name).
+
 
 Each team member will create at least a warrior and a wizard. A tribe can have as many members as
 desired, without exceeding the tribes lifePoints maximum.
