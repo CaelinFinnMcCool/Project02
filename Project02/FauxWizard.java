@@ -8,6 +8,7 @@ public class FauxWizard extends People {
     FauxWizard(String nation, String tribe, int lifePoints)
     {
         super(nation, tribe, PeopleType.wizard, lifePoints);
+        myDescription = "\tFaux Wizard";
         this.nation = nation;
         this.tribe = tribe;
         this.lifePoints = lifePoints;
