@@ -11,6 +11,7 @@ public class FauxWizard extends People {
         this.nation = nation;
         this.tribe = tribe;
         this.lifePoints = lifePoints;
+        myDescription = "\tFaux Wizard";
     }
 
     public int encounterStrategy(Project02.People otherPerson) {
