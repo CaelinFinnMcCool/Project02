@@ -1,15 +1,8 @@
 package Project02;
 
 public class FauxWarrior extends People {
-    String nation;
-    String tribe;
-    int lifePoints;
-
     FauxWarrior(String nation, String tribe, int lifePoints){
         super(nation, tribe, PeopleType.warrior, lifePoints);
-        this.nation = nation;
-        this.tribe = tribe;
-        this.lifePoints = lifePoints;
         myDescription = "\tFaux Warrior";
     }
     public int encounterStrategy(People otherPerson){
