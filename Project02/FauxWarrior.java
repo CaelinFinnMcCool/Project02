@@ -10,6 +10,7 @@ public class FauxWarrior extends People {
         this.nation = nation;
         this.tribe = tribe;
         this.lifePoints = lifePoints;
+        myDescription = "\tFaux Warrior";
     }
     public int encounterStrategy(People otherPerson){
         int usedPoints = 0;
