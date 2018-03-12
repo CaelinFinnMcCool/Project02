@@ -1,10 +1,16 @@
 package Project02;
 
 public class FauxWizard extends People {
-    
+    String nation;
+    String tribe;
+    int lifePoints;
+
     FauxWizard(String nation, String tribe, int lifePoints)
     {
         super(nation, tribe, PeopleType.wizard, lifePoints);
+        this.nation = nation;
+        this.tribe = tribe;
+        this.lifePoints = lifePoints;
         myDescription = "\tFaux Wizard";
     }
 
