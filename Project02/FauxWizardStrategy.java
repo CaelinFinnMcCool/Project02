@@ -1,6 +1,6 @@
 package Project02;
 
-public class FauxWizard extends People {
+public class FauxWizard implements EncounterStrategy {
     String nation;
     String tribe;
     int lifePoints;
