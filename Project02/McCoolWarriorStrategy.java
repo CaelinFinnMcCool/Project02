@@ -1,7 +1,7 @@
 package Project02;
 
 
-public class McCoolWarriorStrategy extends People
+public class McCoolWarriorStrategy implements EncounterStrategy
 {
     public int encounterStrategy(People otherPerson)
     {
