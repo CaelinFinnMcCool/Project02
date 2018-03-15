@@ -1,6 +1,6 @@
 package Project02;
 
-public class NischalWarriorStrategy extends People{
+public class NischalWarriorStrategy implements EncounterStrategy{
 
     public int encounterStrategy(People otherPerson)
     {
