@@ -1,6 +1,6 @@
 package Project02;
 
-public class NischalWizardStrategy extends Project02.People {
+public class NischalWizardStrategy implements EncounterStrategy {
 
 	public int encounterStrategy(Project02.People otherPerson) {
 		int lifePoints = 0;
