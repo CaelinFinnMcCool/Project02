@@ -1,6 +1,6 @@
 package Project02;
 
-public class AndersonWarriorStrategy extends People {
+public class AndersonWarriorStrategy implements EncounterStrategy {
 
 // Goal of warriors is to hit enemy hard while risking lots of life points in the process.
     public int encounterStrategy(People otherPerson) {
