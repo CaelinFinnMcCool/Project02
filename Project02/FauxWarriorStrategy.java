@@ -1,6 +1,6 @@
 package Project02;
 
-public class FauxWarriorStrategy extends People {
+public class FauxWarriorStrategy implements EncounterStrategy {
 
     public int encounterStrategy(People otherPerson){
         int usedPoints = 0;
