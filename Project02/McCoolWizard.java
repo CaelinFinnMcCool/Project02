@@ -9,7 +9,7 @@ public class McCoolWizard extends Project02.People
     }
 
     public int encounterStrategy(People otherPerson){
-        return McCoolWizardStrategy.encounterStrategy(otherPerson);
+        return 0;
     }
 
 }
