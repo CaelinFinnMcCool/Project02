@@ -3,6 +3,8 @@ package Project02;
 
 public class McCoolWarriorStrategy implements EncounterStrategy
 {
+    public McCoolWarriorStrategy(){}
+
     public int encounterStrategy(People otherPerson)
     {
         int lifePoints = 0;

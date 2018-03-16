@@ -1,6 +1,7 @@
 package Project02;
 
 public class NischalWizardStrategy implements EncounterStrategy {
+       public NischalWizardStrategy(){}
 
 	public int encounterStrategy(Project02.People otherPerson) {
 		int lifePoints = 0;

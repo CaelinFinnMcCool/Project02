@@ -1,6 +1,7 @@
 package Project02;
 
 public class NischalWarriorStrategy implements EncounterStrategy{
+    public NischalWarriorStrategy(){}
 
     public int encounterStrategy(People otherPerson)
     {

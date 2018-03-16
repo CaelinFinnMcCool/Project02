@@ -20,33 +20,33 @@ public class Tribe
             if(tribe.equals("Uzbekistan1")) {
                 for (int i = 0; i < 5; i++) {
                     if (i % 2 == 0)
-                        members.add(new McCoolWarrior(nationName, tribeName, tribeLifePoints / 5));
+                        members.add(new McCoolWarrior(nationName, tribeName, tribeLifePoints / 5, new McCoolWarriorStrategy()));
                     else
-                        members.add(new McCoolWizard(nationName, tribeName, tribeLifePoints / 5));
+                        members.add(new McCoolWizard(nationName, tribeName, tribeLifePoints / 5, new McCoolWizardStrategy()));
                 }
             }
             if(tribe.equals("Uzbekistan2")) {
                 for (int i = 0; i < 5; i++) {
                     if (i % 2 == 0)
-                        members.add(new FauxWarrior(nationName, tribeName, tribeLifePoints / 5));
+                        members.add(new FauxWarrior(nationName, tribeName, tribeLifePoints / 5, new FauxWarriorStrategy()));
                     else
-                        members.add(new FauxWizard(nationName, tribeName, tribeLifePoints / 5));
+                        members.add(new FauxWizard(nationName, tribeName, tribeLifePoints / 5, new FauxWizardStrategy()));
                 }
             }
             if(tribe.equals("Berzerkistan1")) {
                 for (int i = 0; i < 8; i++) {
                     if (i % 8 == 0)
-                        members.add(new AndersonWizard(nationName, tribeName, tribeLifePoints / 8));
+                        members.add(new AndersonWizard(nationName, tribeName, tribeLifePoints / 8, new AndersonWarriorStrategy()));
                     else
-                        members.add(new AndersonWarrior(nationName, tribeName, tribeLifePoints / 8));
+                        members.add(new AndersonWarrior(nationName, tribeName, tribeLifePoints / 8, new AndersonWizardStrategy()));
                 }
             }
             if(tribe.equals("Berzerkistan2")) {
                 for (int i = 0; i < 5; i++) {
                     if (i % 2 == 0)
-                        members.add(new NischalWarrior(nationName, tribeName, tribeLifePoints / 5));
+                        members.add(new NischalWarrior(nationName, tribeName, tribeLifePoints / 5, new NischalWarriorStrategy());
                     else
-                        members.add(new NischalWizard(nationName, tribeName, tribeLifePoints / 5));
+                        members.add(new NischalWizard(nationName, tribeName, tribeLifePoints / 5, new NischalWizardStrategy());
                 }
             }
             for(int i = 0; i < members.size(); i++)

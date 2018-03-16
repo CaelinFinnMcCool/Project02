@@ -1,12 +1,8 @@
 package Project02;
 
 public class FauxWarrior extends Project02.People {
-    FauxWarrior(String nation, String tribe, int lifePoints) {
-        super(nation, tribe, PeopleType.warrior, lifePoints);
+    FauxWarrior(String nation, String tribe, int lifePoints, EncounterStrategy strategy) {
+        super(nation, tribe, PeopleType.warrior, lifePoints, strategy);
         myDescription = "\tFaux Warrior";
-    }
-
-    public int encounterStrategy(People otherPerson){
-        return 0;
     }
 }

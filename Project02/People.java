@@ -9,9 +9,10 @@ public abstract class People
     protected String myDescription;
     private int myLifePoints;
     private boolean dead;
+    private EncounterStrategy strategy;
 
 
-    public People(String nation, String tribe, PeopleType person, int lifePoints)
+    public People(String nation, String tribe, PeopleType person, int lifePoints, EcounterStrategy playerStrategy)
     {
         myNation = nation;
         myTribe = tribe;
@@ -19,6 +20,7 @@ public abstract class People
         myDescription = me.getDescription();
         myLifePoints = lifePoints;
         dead = false;
+        strategy = playerStrategy;
     }
 
     public void setDead()
@@ -62,9 +64,10 @@ public abstract class People
     }
 
 
-    public abstract int encounterStrategy(People otherPerson);
-
-
+    public int encounterStrategy(People otherPerson)
+    {
+	return strategy.encounterStrategy(otherPerson);
+    }
 
     public String toString()
     {

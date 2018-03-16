@@ -1,6 +1,7 @@
 package Project02;
 
-public class FauxWizard implements EncounterStrategy{
+public class FauxWizardStrategy implements EncounterStrategy{
+    public FauxWizardStrategy
 
     public int encounterStrategy(Project02.People otherPerson) {
         int usedPoints = 0;

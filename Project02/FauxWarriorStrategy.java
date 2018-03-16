@@ -1,6 +1,7 @@
 package Project02;
 
 public class FauxWarriorStrategy implements EncounterStrategy {
+    public FauxWarriorStrategy(){}
 
     public int encounterStrategy(People otherPerson){
         int usedPoints = 0;

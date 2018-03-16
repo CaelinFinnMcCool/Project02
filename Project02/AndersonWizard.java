@@ -1,12 +1,8 @@
 package Project02;
 
 public class AndersonWizard extends Project02.People {
-    AndersonWizard(String nation, String tribe, int lifePoints) {
-        super(nation, tribe, PeopleType.wizard, lifePoints);
+    AndersonWizard(String nation, String tribe, int lifePoints, EncounterStrategy strategy) {
+        super(nation, tribe, PeopleType.warrior, lifePoints, strategy);
         myDescription = "\tAnderson Wizard";
-    }
-
-    public int encounterStrategy(People otherPerson){
-        return 0;
     }
 }

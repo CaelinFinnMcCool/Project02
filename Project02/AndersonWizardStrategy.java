@@ -1,6 +1,7 @@
 package Project02;
 
 public class AndersonWizardStrategy implements EncounterStrategy {
+    public AndersonWizardStrategy(){}
 
 // Goal of wizards is to preserve life points to give to friendly warriors to last longest in battle.
     public int encounterStrategy(Project02.People otherPerson) {
