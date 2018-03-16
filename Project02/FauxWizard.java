@@ -6,4 +6,8 @@ public class FauxWizard extends People {
         myDescription = "\tFaux Wizard";
     }
 
+    public int encounterStrategy(People otherPerson){
+        return FauxWizardStrategy.encounterStrategy(otherPerson);
+    }
+
 }

@@ -7,5 +7,10 @@ public class McCoolWizard extends Project02.People
         super(nation, tribe, PeopleType.warrior, lifePoints);
         myDescription = "\tMcCool Wizard";
     }
+
+    public int encounterStrategy(People otherPerson){
+        return McCoolWizardStrategy.encounterStrategy(otherPerson);
+    }
+
 }
 

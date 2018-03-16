@@ -7,6 +7,10 @@ public class McCoolWarrior extends People
         super(nation, tribe, PeopleType.warrior, lifePoints);
         myDescription = "\tMcCool Warrior";
     }
+
+    public int encounterStrategy(People otherPerson){
+        return McCoolWarriorStrategy.encounterStrategy(otherPerson);
+    }
     
 }
 

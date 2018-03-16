@@ -5,6 +5,11 @@ public class NischalWizard extends Project02.People {
         super(nation, tribe, PeopleType.warrior, lifePoints);
         myDescription = "\tNischal Wizard";
     }
+
+    public int encounterStrategy(People otherPerson){
+        return NischalWizardStrategy.encounterStrategy(otherPerson);
+    }
+
 }
 
 

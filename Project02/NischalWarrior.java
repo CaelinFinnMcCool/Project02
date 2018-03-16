@@ -6,6 +6,11 @@ public class NischalWarrior extends People{
         myDescription = "\tNischal Warrior";
     }
 
+    public int encounterStrategy(People otherPerson){
+        return NischalWarriorStrategy.encounterStrategy(otherPerson);
+    }
+
+
 }
 
 

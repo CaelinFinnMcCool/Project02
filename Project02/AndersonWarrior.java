@@ -6,4 +6,8 @@ public class AndersonWarrior extends People {
         super(nation, tribe, PeopleType.warrior, lifePoints);
         myDescription = "\tAnderson Warrior";
     }
+
+    public int encounterStrategy(People otherPerson){
+        return AndersonWarriorStrategy.encounterStrategy(otherPerson);
+    }
 }

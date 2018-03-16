@@ -5,4 +5,8 @@ public class FauxWarrior extends People {
         super(nation, tribe, PeopleType.warrior, lifePoints);
         myDescription = "\tFaux Warrior";
     }
+
+    public int encounterStrategy(People otherPerson){
+        return FauxWarriorStrategy.encounterStrategy(otherPerson);
+    }
 }

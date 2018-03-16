@@ -5,3 +5,8 @@ public class AndersonWizard extends Project02.People {
         super(nation, tribe, PeopleType.wizard, lifePoints);
         myDescription = "\tAnderson Wizard";
     }
+
+    public int encounterStrategy(People otherPerson){
+        return AndersonWizardStrategy.encounterStrategy(otherPerson);
+    }
+}
