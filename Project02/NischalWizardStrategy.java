@@ -3,15 +3,15 @@ package Project02;
 public class NischalWizardStrategy implements EncounterStrategy {
        public NischalWizardStrategy(){}
 
-	public int encounterStrategy(Project02.People otherPerson) {
+	public int encounterStrategy(Project02.People me, Project02.People otherPerson) {
 		int lifePoints = 0;
-		if (this.getNation() == otherPerson.getNation()) {
-			if (this.getTribe() != otherPerson.getTribe()) {
-				if (this.getLifePoints() < otherPerson.getLifePoints()) {
+		if (me.getNation() == otherPerson.getNation()) {
+			if (me.getTribe() != otherPerson.getTribe()) {
+				if (me.getLifePoints() < otherPerson.getLifePoints()) {
 
-					lifePoints = (this.getLifePoints() - otherPerson.getLifePoints()) / 2; //heals
+					lifePoints = (me.getLifePoints() - otherPerson.getLifePoints()) / 2; //heals
 				} else {
-					lifePoints = (otherPerson.getLifePoints() - this.getLifePoints()) / 2;//heals
+					lifePoints = (otherPerson.getLifePoints() - me.getLifePoints()) / 2;//heals
 				}
 
 			} else {
@@ -21,14 +21,14 @@ public class NischalWizardStrategy implements EncounterStrategy {
 
 
 		} else {
-			if (this.getTribe() != otherPerson.getTribe()) {
+			if (me.getTribe() != otherPerson.getTribe()) {
 				lifePoints = otherPerson.getLifePoints(); //big attack
 			} else {
-				if (this.getLifePoints() > otherPerson.getLifePoints()) {
+				if (me.getLifePoints() > otherPerson.getLifePoints()) {
 
-					lifePoints = (this.getLifePoints() - otherPerson.getLifePoints()) / 2; //light attack
+					lifePoints = (me.getLifePoints() - otherPerson.getLifePoints()) / 2; //light attack
 				} else {
-					lifePoints = (otherPerson.getLifePoints() - this.getLifePoints()) / 2; //light-attack
+					lifePoints = (otherPerson.getLifePoints() - me.getLifePoints()) / 2; //light-attack
 				}
 			}
 		}

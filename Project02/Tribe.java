@@ -44,9 +44,9 @@ public class Tribe
             if(tribe.equals("Berzerkistan2")) {
                 for (int i = 0; i < 5; i++) {
                     if (i % 2 == 0)
-                        members.add(new NischalWarrior(nationName, tribeName, tribeLifePoints / 5, new NischalWarriorStrategy());
+                        members.add(new NischalWarrior(nationName, tribeName, tribeLifePoints / 5, new NischalWarriorStrategy()));
                     else
-                        members.add(new NischalWizard(nationName, tribeName, tribeLifePoints / 5, new NischalWizardStrategy());
+                        members.add(new NischalWizard(nationName, tribeName, tribeLifePoints / 5, new NischalWizardStrategy()));
                 }
             }
             for(int i = 0; i < members.size(); i++)

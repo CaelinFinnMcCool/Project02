@@ -1,6 +1,6 @@
 package Project02;
 
-public abstract class People
+public class People
 {
     private String personName;
     private String myNation;
@@ -12,7 +12,7 @@ public abstract class People
     private EncounterStrategy strategy;
 
 
-    public People(String nation, String tribe, PeopleType person, int lifePoints, EcounterStrategy playerStrategy)
+    public People(String nation, String tribe, PeopleType person, int lifePoints, EncounterStrategy playerStrategy)
     {
         myNation = nation;
         myTribe = tribe;
@@ -66,7 +66,7 @@ public abstract class People
 
     public int encounterStrategy(People otherPerson)
     {
-	return strategy.encounterStrategy(otherPerson);
+	return this.strategy.encounterStrategy(this, otherPerson);
     }
 
     public String toString()

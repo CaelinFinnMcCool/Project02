@@ -3,21 +3,21 @@ package Project02;
 public class FauxWarriorStrategy implements EncounterStrategy {
     public FauxWarriorStrategy(){}
 
-    public int encounterStrategy(People otherPerson){
+    public int encounterStrategy(Project02.People me, People otherPerson){
         int usedPoints = 0;
 
-        if(this.nation == otherPerson.getNation()){
-            if(this.tribe == otherPerson.getTribe()){
-                if(otherPerson.myDescription.equals("warrior") && otherPerson.getLifePoints() >= this.lifePoints){
-                    usedPoints = -(lifePoints - 2);
+        if(me.getNation() == otherPerson.getNation()){
+            if(me.getTribe() == otherPerson.getTribe()){
+                if(otherPerson.myDescription.equals("warrior") && otherPerson.getLifePoints() >= me.getLifePoints()){
+                    usedPoints = -((me.getLifePoints()) - 2);
                 }
             }
         }
         else{
-            if(otherPerson.getLifePoints() > this.lifePoints && this.lifePoints > 10)
+            if(otherPerson.getLifePoints() > me.getLifePoints() && me.getLifePoints() > 10)
                 usedPoints = 0;
-            else if(lifePoints < 10)
-                usedPoints = this.lifePoints / 2;
+            else if(me.getLifePoints() < 10)
+                usedPoints = (me.getLifePoints() / 2);
             else {
                 usedPoints = otherPerson.getLifePoints();
             }

@@ -5,20 +5,20 @@ public class McCoolWizardStrategy implements EncounterStrategy
 {
     public McCoolWizardStrategy(){}
 
-    public int encounterStrategy(Project02.People otherPerson) {
+    public int encounterStrategy(Project02.People me, Project02.People otherPerson) {
         int lifePoints = 0;
-        if (this.getNation() != otherPerson.getNation()) {
+        if (me.getNation() != otherPerson.getNation()) {
             if (otherPerson.getType() == PeopleType.wizard) {
-                lifePoints = ((this.getLifePoints()));
+                lifePoints = ((me.getLifePoints()));
             }
             else {
-                lifePoints = -(this.getLifePoints());
+                lifePoints = -(me.getLifePoints());
             }
         }
         else
         {
-            if (otherPerson.getLifePoints() < this.getLifePoints()) {
-                lifePoints = (int) (this.getLifePoints());
+            if (otherPerson.getLifePoints() < me.getLifePoints()) {
+                lifePoints = (int) (me.getLifePoints());
             }
             else {
                 lifePoints = 0;
