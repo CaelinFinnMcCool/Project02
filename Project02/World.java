@@ -125,8 +125,6 @@ public class World
         // amount of life points actually used is subject to a psuedo-random encounter
         Integer p1damage =  (int) (generator.nextFloat() * person1LifePointsToUse);
         Integer p2damage =  (int) (generator.nextFloat() * person2LifePointsToUse);
-	 System.out.println(p1damage);
-	 System.out.println(p2damage);
         if ((p1damage > 0) && (p2damage > 0))  // person 1  and person 2 are fighting and inflicting damage
         {
             p2damage =  (int) (generator.nextFloat() * (worldCreatedPeople.get(person1).getType().ordinal()+1)*p1damage);
@@ -147,17 +145,9 @@ public class World
 
         // record the damage: positive damage should be subtracted for persons lifePoint
         // negative damage is added to persons life points
-        
         worldCreatedPeople.get(person1).modifyLifePoints((-p2damage));
         worldCreatedPeople.get(person2).modifyLifePoints((-p1damage ));
-        if(p2damage<0)
-	    {
-		worldCreatedPeople.get(person2).modifyLifePoints((p2damage));
-	    }
-	if(p1damage<0)
-            {
-		worldCreatedPeople.get(person1).modifyLifePoints((p1damage));
-            }
+
         // Both people lose 1 life point per encounter due to aging
         worldCreatedPeople.get(person1).modifyLifePoints((-1));
         worldCreatedPeople.get(person2).modifyLifePoints((-1));
