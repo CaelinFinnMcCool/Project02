@@ -7,6 +7,6 @@ public class AndersonWizard extends Project02.People {
     }
 
     public int encounterStrategy(People otherPerson){
-        return AndersonWizardStrategy.encounterStrategy(otherPerson);
+        return 0;
     }
 }
