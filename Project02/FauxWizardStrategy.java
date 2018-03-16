@@ -1,19 +1,6 @@
 package Project02;
 
-public class FauxWizard implements EncounterStrategy {
-    String nation;
-    String tribe;
-    int lifePoints;
-
-    FauxWizard(String nation, String tribe, int lifePoints)
-    {
-        super(nation, tribe, PeopleType.wizard, lifePoints);
-        myDescription = "\tFaux Wizard";
-        this.nation = nation;
-        this.tribe = tribe;
-        this.lifePoints = lifePoints;
-        myDescription = "\tFaux Wizard";
-    }
+public class FauxWizard implements EncounterStrategy{
 
     public int encounterStrategy(Project02.People otherPerson) {
         int usedPoints = 0;
