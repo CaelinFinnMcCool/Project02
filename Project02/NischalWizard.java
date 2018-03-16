@@ -7,7 +7,7 @@ public class NischalWizard extends Project02.People {
     }
 
     public int encounterStrategy(People otherPerson){
-        return NischalWizardStrategy.encounterStrategy(otherPerson);
+        return 0;
     }
 
 }
