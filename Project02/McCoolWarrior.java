@@ -1,7 +1,7 @@
 package Project02;
 
 
-public class McCoolWarrior extends People
+public class McCoolWarrior extends Project02.People
 {
     McCoolWarrior(String nation, String tribe, int lifePoints) {
         super(nation, tribe, PeopleType.warrior, lifePoints);
@@ -9,7 +9,7 @@ public class McCoolWarrior extends People
     }
 
     public int encounterStrategy(People otherPerson){
-        return McCoolWarriorStrategy.encounterStrategy(otherPerson);
+        return 0;
     }
     
 }
