@@ -34,11 +34,11 @@ public class Tribe
                 }
             }
             if(tribe.equals("Berzerkistan1")) {
-                for (int i = 0; i < 2; i++) {
+                for (int i = 0; i < 12; i++) {
                     if (i % 2 == 0)
-                        members.add(new AndersonWizard(nationName, tribeName, tribeLifePoints / 2, new AndersonWarriorStrategy()));
+                        members.add(new AndersonWizard(nationName, tribeName, tribeLifePoints / 12, new AndersonWarriorStrategy()));
                     else
-                        members.add(new AndersonWarrior(nationName, tribeName, tribeLifePoints / 2, new AndersonWizardStrategy()));
+                        members.add(new AndersonWarrior(nationName, tribeName, tribeLifePoints / 12, new AndersonWizardStrategy()));
                 }
             }
             if(tribe.equals("Berzerkistan2")) {
