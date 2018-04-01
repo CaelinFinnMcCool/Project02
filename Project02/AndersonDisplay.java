@@ -15,6 +15,9 @@ public class AndersonDisplay implements Observer, TribeDisplay {
     }
     
     public void display() {
-        //Put display here
+        System.out.println("Remaining number of Berzerkistan1 Warriors alive: " + warriorsLeft);
+        System.out.println("Remaining number of Berzerkistan2 Wizards alive: " + wizardsLeft);
+        System.out.println("Remaining tribe population: " + tribePopulation);
+        System.out.println("Total remaining Lifepoints of Berzerkistan1: " + totalLifeRemaining);
     }
 }
