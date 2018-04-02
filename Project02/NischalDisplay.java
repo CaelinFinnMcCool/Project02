@@ -1,4 +1,4 @@
-
+package Project02;
 
 public class NischalDisplay implements Observer, TribeDisplay{
     

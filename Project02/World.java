@@ -9,6 +9,7 @@ public class World
     private ArrayList<Nation> allNations = new ArrayList<>();
     private ArrayList<Nation> allLivingNations = new ArrayList<>();
     private int numberOfNations = 0;
+    private TribeData tribeData = new TribeData();
 
     Random generator;
     ArrayList<People> worldCreatedPeople = new ArrayList<>();
@@ -22,6 +23,8 @@ public class World
         generator = new Random(seed.getTime());
         createWorld();
         worldCreatedPeople.addAll(getWorldCreatedPopulation());
+
+	FauxDisplay fauxDisplay = new FauxDisplay(tribeData);
     }
 
     public void war()
@@ -173,6 +176,7 @@ public class World
             encounter(combatants.get(combatantIndex), combatants.get(combatantIndex+1));
             combatantIndex = combatantIndex + 2;
         }
+	tribeData.setMeasurements(1, 1, 1, 1);
     }
 
 

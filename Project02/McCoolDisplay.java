@@ -1,3 +1,5 @@
+package Project02;
+
 public class McCoolDisplay implements Observer, TribeDisplay {
     private int totalLifeRemaining;
     private int tribePopulation;

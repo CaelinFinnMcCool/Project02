@@ -1,3 +1,5 @@
+package Project02;
+
 import java.util.*;
 
 public class TribeData implements Subject {
@@ -31,6 +33,14 @@ public class TribeData implements Subject {
     
     public void measurementsChanged() {
         notifyObservers();
+    }
+
+    public void setMeasurements(int totalLifeRemaining, int tribePopulation, int warriorsLeft, int wizardsLeft) {
+        this.totalLifeRemaining = totalLifeRemaining;
+        this.tribePopulation = tribePopulation;
+        this.warriorsLeft = warriorsLeft;
+        this.wizardsLeft = wizardsLeft;
+        measurementsChanged();
     }
     
     /*public void setMeasurements(float temperature, float humidity, float pressure) {

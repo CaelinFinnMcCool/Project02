@@ -1,10 +1,16 @@
+package Project02;
+
 public class FauxDisplay implements Observer, TribeDisplay {
     private int totalLifeRemaining;
     private int tribePopulation;
     private int warriorsLeft;
     private int wizardsLeft;
+    private TribeData tribeData;
 
-    public FauxDisplay()
+    public FauxDisplay(TribeData tribeData){
+	this.tribeData = tribeData;
+	tribeData.registerObserver(this);
+    }
 
     public void update(int totalLifeRemaining, int tribePopulation, int warriorsLeft, int wizardsLeft) {
         this.totalLifeRemaining = totalLifeRemaining;
@@ -15,8 +21,8 @@ public class FauxDisplay implements Observer, TribeDisplay {
     }
     
     public void display() {
-        System.out.println(“The Fauxtribe has “ + tribePopulation + “ with “ + 			totalLifeRemaining + “ life points remaining”);
-	System.out.println(“There are “ + warriorsLeft + “ FauxWarriors left”);
-	System.out.println(“There are “ + wizardsLeft + “ FauxWizards left”);
+        System.out.println("The Fauxtribe has " + tribePopulation + " with " + 			totalLifeRemaining + " life points remaining");
+	System.out.println("There are " + warriorsLeft + " FauxWarriors left");
+	System.out.println("There are " + wizardsLeft + " FauxWizards left");
     }
 }
