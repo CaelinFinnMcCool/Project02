@@ -179,9 +179,9 @@ public class World
             encounter(combatants.get(combatantIndex), combatants.get(combatantIndex+1));
             combatantIndex = combatantIndex + 2;
         }
-	tribeData.setMeasurements(allNations.get(0).tribes.get(0).getTribeLifePoints(), allNations.get(0).tribes.get(0).getTribeSize(), allNations.get(0).tribes.get(0).getNumWarriors(), allNations.get(0).tribes.get(0).getNumWizards());
+        tribeData.setMeasurements(worldCreatedPeople);
     }
 
-
+//allNations.get(0).tribes.get(0).getTribeLifePoints(), allNations.get(0).tribes.get(0).getTribeSize(), allNations.get(0).tribes.get(0).getNumWarriors(), allNations.get(0).tribes.get(0).getNumWizards()
 
 }
