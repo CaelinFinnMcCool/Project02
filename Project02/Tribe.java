@@ -122,4 +122,22 @@ public class Tribe
         return result;
     }
 
+    public int getNumWarriors()
+    {
+	int numWarriors = 0;
+	for(int i = 0; i < livingMembers.size(); i++)
+	     if(livingMembers.get(i).getType().getDescription().equals("warrior"))
+		    numWarriors++;
+	return numWarriors;
+    }
+
+    public int getNumWizards()
+    {
+	int numWizards = 0;
+	for(int i = 0; i < livingMembers.size(); i++)
+	     if(livingMembers.get(i).getType().getDescription().equals("wizard"))
+		    numWizards++;
+	return numWizards;
+    }
+
 }

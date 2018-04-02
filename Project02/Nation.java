@@ -7,7 +7,7 @@ public class Nation
     private int nationLifePoints;
     public static int nationCount = 0;
     private String nationName;
-    private ArrayList<Tribe> tribes = new ArrayList<>();
+    protected ArrayList<Tribe> tribes = new ArrayList<>();
     private ArrayList<People> population = new ArrayList<>();
     private ArrayList<People> livingPopulation = new ArrayList<>();
 
