@@ -21,7 +21,7 @@ public class FauxDisplay implements Observer, TribeDisplay {
     }
     
     public void display() {
-        System.out.println("The Fauxtribe has " + tribePopulation + " with " + 			totalLifeRemaining + " life points remaining");
+        System.out.println("The Uzbekistan2 has " + tribePopulation + " people left with " + totalLifeRemaining + " life points remaining");
 	System.out.println("There are " + warriorsLeft + " FauxWarriors left");
 	System.out.println("There are " + wizardsLeft + " FauxWizards left");
     }

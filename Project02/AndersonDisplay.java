@@ -5,8 +5,12 @@ public class AndersonDisplay implements Observer, TribeDisplay {
     private int tribePopulation;
     private int warriorsLeft;
     private int wizardsLeft;
+    private TribeData tribeData;
 
-    public AndersonDisplay()
+    public AndersonDisplay(TribeData tribeData){
+       this.tribeData = tribeData;
+	tribeData.registerObserver(this);
+}
 
     public void update(int totalLifeRemaining, int tribePopulation, int warriorsLeft, int wizardsLeft) {
         this.totalLifeRemaining = totalLifeRemaining;
