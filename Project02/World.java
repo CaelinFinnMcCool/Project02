@@ -24,7 +24,10 @@ public class World
         createWorld();
         worldCreatedPeople.addAll(getWorldCreatedPopulation());
 
+	AndersonDisplay andersonDisplay = new AndersonDisplay(tribeData);
 	FauxDisplay fauxDisplay = new FauxDisplay(tribeData);
+	McCoolDisplay mcCoolDisplay = new McCoolDisplay(tribeData);
+	NischalDisplay nischalDisplay = new NischalDisplay(tribeData);
     }
 
     public void war()

@@ -17,7 +17,6 @@ public class NischalDisplay implements Observer, TribeDisplay{
         
     }
     
-    @Override
     public void update(int NischalWarriorlifePointsremaining , int NischaltribePopulation, int NischalwarriorsLeft, int NischalwizardsLeft)
     // totalLifeRemaining, tribePopulation, warriorsLeft, wizardsLeft
     {
@@ -27,12 +26,11 @@ public class NischalDisplay implements Observer, TribeDisplay{
         this.NischalwarriorsLeft = NischalwarriorsLeft;
         this.NischalwizardsLeft = NischalwizardsLeft;
         
-        NischalDisplay();
+        display();
         
     }
     
-    @Override
-    public void Display(){
+    public void display(){
         System.out.println("The total no. of Nischal Warrior left: "+NischalwarriorsLeft);
         System.out.println("The total no. of Nischal Wizard left: "+NischalwizardsLeft);
         System.out.println("The total tribe population: "+NischaltribePopulation);

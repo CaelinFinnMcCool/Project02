@@ -5,6 +5,7 @@ public class McCoolDisplay implements Observer, TribeDisplay {
     private int tribePopulation;
     private int warriorsLeft;
     private int wizardsLeft;
+    private TribeData tribeData;
     
     public McCoolDisplay(TribeData tribeData){
         this.tribeData = tribeData;
@@ -20,9 +21,9 @@ public class McCoolDisplay implements Observer, TribeDisplay {
     }
     
     public void display() {
-        System.out.println(“The McCool tribe has “ + tribePopulation + “ with “ + totalLifeRemaining + “ life points remaining.”);
-        System.out.println(“There are “ + warriorsLeft + “ McCool Warriors left.”);
-        System.out.println(“There are “ + wizardsLeft + “ McCool Wizards left.”);
+        System.out.println("The McCool tribe has " + tribePopulation + " with " + totalLifeRemaining + " life points remaining.");
+        System.out.println("There are " + warriorsLeft + " McCool Warriors left.");
+        System.out.println("There are " + wizardsLeft + " McCool Wizards left.");
     }
 }
 
