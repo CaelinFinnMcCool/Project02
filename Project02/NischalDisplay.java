@@ -17,11 +17,11 @@ public class NischalDisplay implements Observer, TribeDisplay{
         
     }
     
-    public void update(int NischalWarriorlifePointsremaining , int NischaltribePopulation, int NischalwarriorsLeft, int NischalwizardsLeft)
+    public void update(int NischalTotalLifeRemaining, int NischaltribePopulation, int NischalwarriorsLeft, int NischalwizardsLeft)
     // totalLifeRemaining, tribePopulation, warriorsLeft, wizardsLeft
     {
         
-        this.NischaltotalLifeRemaining = NischaltotalLifeRemaining;
+        this.NischaltotalLifeRemaining = NischalTotalLifeRemaining;
         this.NischaltribePopulation = NischaltribePopulation;
         this.NischalwarriorsLeft = NischalwarriorsLeft;
         this.NischalwizardsLeft = NischalwizardsLeft;
