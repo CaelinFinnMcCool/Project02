@@ -21,7 +21,7 @@ public class McCoolDisplay implements Observer, TribeDisplay {
     }
     
     public void display() {
-        System.out.println("The McCool tribe has " + tribePopulation + " with " + totalLifeRemaining + " life points remaining.");
+        System.out.println("The McCool tribe has " + tribePopulation + " people with " + totalLifeRemaining + " life points remaining.");
         System.out.println("There are " + warriorsLeft + " McCool Warriors left.");
         System.out.println("There are " + wizardsLeft + " McCool Wizards left.");
     }
