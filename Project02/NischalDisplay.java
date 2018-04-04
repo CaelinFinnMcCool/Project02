@@ -1,50 +1,37 @@
 package Project02;
+import Project02.People;
+import Project02.World;
+import Project02.Nation;
+import java.util.*;
 
-public class NischalDisplay implements Observer, TribeDisplay{
+public class NischalDisplay implements Observer {
+    private int totalLifeRemaining;
+    private int tribePopulation;
+    private int warriorsLeft;
+    private int wizardsLeft;
     
-    private int NischaltotalLifeRemaining;
-    private int NischaltribePopulation;
-
-    private int NischalwarriorsLeft;
-    private int NischalwizardsLeft;
-    
-    private TribeData tribeData;
-    
-    
-    public NischalDisplay(TribeData tribeData){
-        this.tribeData = tribeData;
-        tribeData.registerObserver(this);
-        
+    public NischalDisplay(World earth){
+        this.earth = earth;
+        earth.registerObserver(this);
     }
     
-    public void update(int NischalTotalLifeRemaining, int NischaltribePopulation, int NischalwarriorsLeft, int NischalwizardsLeft)
-    // totalLifeRemaining, tribePopulation, warriorsLeft, wizardsLeft
-    {
-        
-        this.NischaltotalLifeRemaining = NischalTotalLifeRemaining;
-        this.NischaltribePopulation = NischaltribePopulation;
-        this.NischalwarriorsLeft = NischalwarriorsLeft;
-        this.NischalwizardsLeft = NischalwizardsLeft;
-        
+    public void update(ArrayList<People> worldCreatedPeople) {
+        this.worldCreatedPeople = worldCreatedPeople;
         display();
-        
     }
     
-    public void display(){
-        System.out.println("The total no. of Nischal Warrior left: "+NischalwarriorsLeft);
-        System.out.println("The total no. of Nischal Wizard left: "+NischalwizardsLeft);
-        System.out.println("The total tribe population: "+NischaltribePopulation);
-        System.out.println("The total lifepoints left: "+NischaltotalLifeRemaining);
-
-
-
-        
-        
-        
-        
-        
+    public void display() {
+        int tribeMemberCount = 0;
+        for (int i = 0; i < worldCreatedPeople.size(); i++) {
+            if(worldCreatedPeople.get(i).getTribe().equals("Berzerkistan1")) {
+                if(worldCreatedPeople.get(i).isPersonAlive()) {
+                    tribeMemberCount++;
+                }
+            }
+        }
+        System.out.println("Remaining tribe population: " + tribeMemberCount);
+        System.out.println("Remaining number of Berzerkistan1 Warriors alive: " + 0);
+        System.out.println("Remaining number of Berzerkistan2 Wizards alive: " + 0);
+        System.out.println("Total remaining Lifepoints of Berzerkistan1: " + 0);
     }
-    
-    
-
 }

@@ -1,5 +1,6 @@
 package Project02;
+import java.util.*;
 
 public interface Observer {
-    public void update(int totalLifeRemaining, int tribePopulation, int warriorsLeft, int wizardsLeft);
+    public void update(ArrayList<People> worldCreatedPeople);
 }

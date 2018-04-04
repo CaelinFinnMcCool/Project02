@@ -1,4 +1,5 @@
-package Project02;
+/*
+ package Project02;
 
 import java.util.*;
 
@@ -42,5 +43,5 @@ public class TribeData implements Subject {
         this.wizardsLeft = wizardsLeft;
         measurementsChanged();
     }
-    
 }
+ */

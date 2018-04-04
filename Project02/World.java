@@ -9,7 +9,8 @@ public class World
     private ArrayList<Nation> allNations = new ArrayList<>();
     private ArrayList<Nation> allLivingNations = new ArrayList<>();
     private int numberOfNations = 0;
-    private TribeData tribeData = new TribeData();
+    //private TribeData tribeData = new TribeData();
+    private ArrayList observers;
 
     Random generator;
     ArrayList<People> worldCreatedPeople = new ArrayList<>();
@@ -23,11 +24,12 @@ public class World
         generator = new Random(seed.getTime());
         createWorld();
         worldCreatedPeople.addAll(getWorldCreatedPopulation());
+        observers = new ArrayList();
 
-	AndersonDisplay andersonDisplay = new AndersonDisplay(tribeData);
-	FauxDisplay fauxDisplay = new FauxDisplay(tribeData);
-	McCoolDisplay mcCoolDisplay = new McCoolDisplay(tribeData);
-	NischalDisplay nischalDisplay = new NischalDisplay(tribeData);
+	AndersonDisplay andersonDisplay = new AndersonDisplay(worldCreatedPeople);
+	//FauxDisplay fauxDisplay = new FauxDisplay(worldCreatedPeople);
+	//McCoolDisplay mcCoolDisplay = new McCoolDisplay(worldCreatedPeople);
+	//NischalDisplay nischalDisplay = new NischalDisplay(worldCreatedPeople);
     }
 
     public void war()
@@ -179,7 +181,29 @@ public class World
             encounter(combatants.get(combatantIndex), combatants.get(combatantIndex+1));
             combatantIndex = combatantIndex + 2;
         }
-        tribeData.setMeasurements(worldCreatedPeople);
+    }
+    
+    
+    public void registerObserver(Observer o) {
+        observers.add(o);
+    }
+    
+    public void removeObserver(Observer o) {
+        int i = observers.indexOf(o);
+        if (i >= 0) {
+            observers.remove(i);
+        }
+    }
+    
+    public void notifyObservers() {
+        for (int i = 0; i < observers.size(); i++) {
+            Observer observer = (Observer)observers.get(i);
+            observer.update(worldCreatedPeople);
+        }
+    }
+    
+    public void measurementsChanged() {
+        notifyObservers();
     }
 
 //allNations.get(0).tribes.get(0).getTribeLifePoints(), allNations.get(0).tribes.get(0).getTribeSize(), allNations.get(0).tribes.get(0).getNumWarriors(), allNations.get(0).tribes.get(0).getNumWizards()
