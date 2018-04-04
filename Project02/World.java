@@ -26,7 +26,7 @@ public class World
         worldCreatedPeople.addAll(getWorldCreatedPopulation());
         observers = new ArrayList();
 
-	AndersonDisplay andersonDisplay = new AndersonDisplay(worldCreatedPeople);
+	AndersonDisplay andersonDisplay = new AndersonDisplay(this);
 	//FauxDisplay fauxDisplay = new FauxDisplay(worldCreatedPeople);
 	//McCoolDisplay mcCoolDisplay = new McCoolDisplay(worldCreatedPeople);
 	//NischalDisplay nischalDisplay = new NischalDisplay(worldCreatedPeople);

@@ -5,6 +5,8 @@ import Project02.Nation;
 import java.util.*;
 
 public class AndersonDisplay implements Observer {
+    private ArrayList<People> worldCreatedPeople;
+    private World earth;
 
     public AndersonDisplay(World earth){
         this.earth = earth;
