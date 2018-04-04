@@ -27,9 +27,9 @@ public class World
         observers = new ArrayList();
 
 	AndersonDisplay andersonDisplay = new AndersonDisplay(this);
-	//FauxDisplay fauxDisplay = new FauxDisplay(worldCreatedPeople);
-	//McCoolDisplay mcCoolDisplay = new McCoolDisplay(worldCreatedPeople);
-	//NischalDisplay nischalDisplay = new NischalDisplay(worldCreatedPeople);
+	FauxDisplay fauxDisplay = new FauxDisplay(this);
+	McCoolDisplay mcCoolDisplay = new McCoolDisplay(this);
+	NischalDisplay nischalDisplay = new NischalDisplay(this);
     }
 
     public void war()
@@ -181,6 +181,7 @@ public class World
             encounter(combatants.get(combatantIndex), combatants.get(combatantIndex+1));
             combatantIndex = combatantIndex + 2;
         }
+        notifyObservers();
     }
     
     
